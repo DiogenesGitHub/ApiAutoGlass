@@ -3,14 +3,34 @@
     internal class ProdutoScripts
     {
         internal static string Select =>
-            @" SELECT * FROM PRODUTO";
+            @" SELECT
+            ID_PRODUTO AS ID,
+            COD_PRODUTO AS  CODIGOPRODUTO,			
+            DESC_PRODUTO  AS  DESCRICAOPRODUTO,		
+            SITUACAO_PRODUTO   AS  SITUACAOPRODUTO,	
+            DH_FABRICACAO  AS  DATAFABRICACAO,			
+            DH_VALIDADE  AS  DATAVALIDADE,			
+            COD_FORNECEDOR AS  CODIGOFORNECEDOR,			
+            DESC_FORNECEDOR  AS  DESCRICAOFORNECEDOR,		
+            CNPJ  AS  CNPJ
+            FROM AUTOGLASS..PRODUTO";
 
         internal static string SelectById =>
-            @" SELECT * FROM PRODUTO 
+            @" SELECT 
+            ID_PRODUTO AS ID,
+            COD_PRODUTO AS  CODIGOPRODUTO,			
+            DESC_PRODUTO  AS  DESCRICAOPRODUTO,		
+            SITUACAO_PRODUTO   AS  SITUACAOPRODUTO,	
+            DH_FABRICACAO  AS  DATAFABRICACAO,			
+            DH_VALIDADE  AS  DATAVALIDADE,			
+            COD_FORNECEDOR AS  CODIGOFORNECEDOR,			
+            DESC_FORNECEDOR  AS  DESCRICAOFORNECEDOR,		
+            CNPJ  AS  CNPJ
+            FROM AUTOGLASS..PRODUTO 
             WHERE COD_PRODUTO =  @COD_PRODUTO";
 
         internal static string Insert =>
-            @" INSERT INTO PRODUTO 
+            @" INSERT INTO AUTOGLASS..PRODUTO 
             VALUES 
             (@COD_PRODUTO, 
             @DESC_PRODUTO,
@@ -22,7 +42,7 @@
             @CNPJ)";
 
         internal static string UpdateById =>
-            @" UPDATE PRODUTO SET
+            @" UPDATE AUTOGLASS..PRODUTO SET
             COD_PRODUTO  = @COD_PRODUTO	
             DESC_PRODUTO = @DESC_PRODUTO	
             SITUACAO_PRODUTO = @SITUACAO_PRODUTO
@@ -34,7 +54,7 @@
             WHERE COD_PRODUTO = @COD_PRODUTO";
 
         internal static string DeleteById =>
-            @" UPDATE PRODUTO SET 
+            @" UPDATE AUTOGLASS..PRODUTO SET 
             SITUACAO_PRODUTO = 0 
             WHERE COD_PRODUTO  = @COD_PRODUTO";
     }

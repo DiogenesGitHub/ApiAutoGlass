@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PCZkQz7LeeVltlD95Z/VCjuZ/BUihvquopGcLdGaPQsig8VrOR2CXoYFKI5lWtskeJiptM6qf/Yr3yPtvT9Z6Q==",
+  "dgSpecHash": "GHs9qo6ErG8cKelGDBcjF9SOEWIzybLzn7lq5vWX+FWpQ3Jo0+070p8xG6ckZVS83A9bM+AkMKT3RfritQzwqA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\111573\\Desktop\\Projeto Pessoal\\AutoGlass\\AutoGlass.csproj",
+  "projectFilePath": "C:\\Users\\111573\\Desktop\\Projeto Pessoal\\ApiAutoGlass\\AutoGlass.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\111573\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\111573\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

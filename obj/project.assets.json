@@ -1080,11 +1080,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\111573\\Desktop\\Projeto Pessoal\\AutoGlass\\AutoGlass.csproj",
+      "projectUniqueName": "C:\\Users\\111573\\Desktop\\Projeto Pessoal\\ApiAutoGlass\\AutoGlass.csproj",
       "projectName": "AutoGlass",
-      "projectPath": "C:\\Users\\111573\\Desktop\\Projeto Pessoal\\AutoGlass\\AutoGlass.csproj",
+      "projectPath": "C:\\Users\\111573\\Desktop\\Projeto Pessoal\\ApiAutoGlass\\AutoGlass.csproj",
       "packagesPath": "C:\\Users\\111573\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\111573\\Desktop\\Projeto Pessoal\\AutoGlass\\obj\\",
+      "outputPath": "C:\\Users\\111573\\Desktop\\Projeto Pessoal\\ApiAutoGlass\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
