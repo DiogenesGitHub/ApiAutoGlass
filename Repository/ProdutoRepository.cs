@@ -37,7 +37,7 @@ namespace AutoGlass.Repository
                 using (var conn = new SqlConnection(EnvironmentVariable.GetConnectionDataBase()))
                 {
                     var parametros = new DynamicParameters();
-                    parametros.Add("@id_produto", id);
+                    parametros.Add("@COD_PRODUTO", id);
 
                     var produto = await conn.QueryFirstOrDefaultAsync<ProdutoEntitys>(ProdutoScripts.SelectById, parametros);
 
@@ -69,7 +69,7 @@ namespace AutoGlass.Repository
 
                     var result = await conn.ExecuteAsync(ProdutoScripts.Insert, parametros);
                     
-                    return result.Any();
+                    return result != null;
                 }
             }
             catch (System.Exception)
@@ -87,8 +87,6 @@ namespace AutoGlass.Repository
                 {
                     var parametros = new DynamicParameters();
 
-                    parametros.Add("@cod_produto", protudo.Id);
-
                     parametros.Add("@cod_produto", protudo.CodigoProduto);
                     parametros.Add("@desc_produto", protudo.DescricaoProduto);
                     parametros.Add("@situacao_produto", protudo.SituacaoProduto);
@@ -100,11 +98,11 @@ namespace AutoGlass.Repository
 
                     var result =  await conn.ExecuteAsync(ProdutoScripts.UpdateById, parametros);
 
-                    return result.Any();
+                    return result != null;
 
                 }
             }
-            catch (System.Exception)
+            catch (System.Exception e)
             {
 
                 throw;
@@ -122,7 +120,7 @@ namespace AutoGlass.Repository
 
                     var result = await conn.ExecuteAsync(ProdutoScripts.DeleteById, parametros);
 
-                    return result.Any();
+                    return result != null;
 
                 }
             }

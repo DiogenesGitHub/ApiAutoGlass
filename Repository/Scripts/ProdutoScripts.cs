@@ -27,7 +27,8 @@
             DESC_FORNECEDOR  AS  DESCRICAOFORNECEDOR,		
             CNPJ  AS  CNPJ
             FROM AUTOGLASS..PRODUTO 
-            WHERE COD_PRODUTO =  @COD_PRODUTO";
+            WHERE 1=1
+            AND COD_PRODUTO =  @COD_PRODUTO";
 
         internal static string Insert =>
             @" INSERT INTO AUTOGLASS..PRODUTO 
@@ -43,19 +44,21 @@
 
         internal static string UpdateById =>
             @" UPDATE AUTOGLASS..PRODUTO SET
-            COD_PRODUTO  = @COD_PRODUTO	
-            DESC_PRODUTO = @DESC_PRODUTO	
-            SITUACAO_PRODUTO = @SITUACAO_PRODUTO
-            DH_FABRICACAO = @DH_FABRICACAO
-            DH_VALIDADE = @DH_VALIDADE
-            COD_FORNECEDOR = @COD_FORNECEDOR
-            DESC_FORNECEDOR = @DESC_FORNECEDOR
+            COD_PRODUTO  = @COD_PRODUTO	,
+            DESC_PRODUTO = @DESC_PRODUTO ,	
+            SITUACAO_PRODUTO = @SITUACAO_PRODUTO ,
+            DH_FABRICACAO = @DH_FABRICACAO ,
+            DH_VALIDADE = @DH_VALIDADE ,
+            COD_FORNECEDOR = @COD_FORNECEDOR ,
+            DESC_FORNECEDOR = @DESC_FORNECEDOR ,
             CNPJ = @CNPJ
-            WHERE COD_PRODUTO = @COD_PRODUTO";
+            WHERE 1=1
+            AND COD_PRODUTO = @COD_PRODUTO";
 
         internal static string DeleteById =>
             @" UPDATE AUTOGLASS..PRODUTO SET 
             SITUACAO_PRODUTO = 0 
-            WHERE COD_PRODUTO  = @COD_PRODUTO";
+            WHERE 1=1 
+            AND COD_PRODUTO  = @COD_PRODUTO";
     }
 }

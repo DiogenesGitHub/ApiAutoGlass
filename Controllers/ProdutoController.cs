@@ -46,9 +46,6 @@ namespace AutoGlass.Controllers
             {
                 var result = await _protudoServices.GetId(id);
 
-                if (result == null)
-                    return NotFound("Não foi possivel consultar.");
-
                 return Ok(result);
             }
             catch (System.Exception e)
@@ -63,9 +60,6 @@ namespace AutoGlass.Controllers
             try
             {
                 var result = await _protudoServices.Insert(protudo);
-
-                if (result)
-                    return NotFound("Não foi possivel editar.");
 
                 return Ok(result);
             }
@@ -82,9 +76,6 @@ namespace AutoGlass.Controllers
             {
                 var result = await _protudoServices.Update(protudo);
 
-                if (result)
-                    return NotFound("Não foi possivel editar.");
-
                 return Ok(result);
             }
             catch (System.Exception e)
@@ -93,15 +84,12 @@ namespace AutoGlass.Controllers
             }
         }
 
-        [HttpPut("Remove/{id}")]
+        [HttpPut("Remove/{cod_produto}")]
         public async Task<IActionResult> Remove(int cod_produto)
         {
             try
             {
                 var result = await _protudoServices.Remove(cod_produto);
-
-                if (result)
-                    return NotFound("Não foi possivel editar.");
 
                 return Ok(result);
             }

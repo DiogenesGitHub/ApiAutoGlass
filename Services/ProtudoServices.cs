@@ -11,6 +11,10 @@ namespace AutoGlass.Services
     {
         private readonly IProdutoRepository _produtoRepository;
 
+        public ProtudoServices(IProdutoRepository ProdutoRepository) 
+        {
+            _produtoRepository = ProdutoRepository;
+        }
 
         public async Task<IEnumerable<ProdutoEntitys>> Get()
         {
